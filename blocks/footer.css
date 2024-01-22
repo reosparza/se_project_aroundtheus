@@ -3,4 +3,17 @@
   font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
+  margin: 67px 0 0 0;
+}
+
+@media screen and (max-width: 919px) {
+  .footer {
+    max-width: 581px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .footer {
+    max-width: 282px;
+  }
 }
