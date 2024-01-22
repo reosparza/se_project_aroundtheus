@@ -8,18 +8,14 @@
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+The purpose of this project is to build a responsive website that takes into account changes in viewing resolution using media queries to give viewers an optimal viewing experience. This project utilizes a combination of flexbox learned in the last spring and grid, in conjunction to allow for a greater flexibility in designing websites. 
   
-**Figma**  
+**Link to Figma Design**  
   
 * [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)  
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
 
 **Page to project**
 
 https://reosparza.github.io/se_project_aroundtheus/
+
+https://drive.google.com/file/d/1cH4DKusO7qP7ncTwzOVA4ucVCzA2jh3n/view?usp=drive_link
