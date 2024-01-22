@@ -5,8 +5,14 @@
 @import url(../blocks/profile.css);
 @import url(../blocks/cards.css);
 @import url(../blocks/card.css);
+@import url(../blocks/footer.css);
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
+  .profile__title {
+    min-width: 196px;
+    font-size: 22px;
+  }
+
   .profile {
     flex-direction: column;
   }
