@@ -5,19 +5,10 @@
   overflow: hidden;
 }
 
-.card__list {
-  display: grid;
-  justify-content: center;
-  list-style-type: none;
-  grid-template-columns: repeat(auto-fit, 282px);
-  grid-gap: 20px 17px;
-  padding: 0;
-  margin: 0;
-}
-
 .card__image {
   width: 282px;
   height: 282px;
+  object-fit: cover;
 }
 
 .card__description {
@@ -41,6 +32,7 @@
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
+  max-width: 219px;
 }
 
 .card__like-button {
@@ -52,6 +44,6 @@
 }
 
 .card__like-button:hover {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: pointer;
 }
