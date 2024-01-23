@@ -16,4 +16,12 @@
   .footer {
     max-width: 282px;
   }
+
+  .footer__text {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 48px;
+    margin-bottom: 36px;
+  }
 }
