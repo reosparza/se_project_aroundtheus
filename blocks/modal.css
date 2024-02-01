@@ -9,11 +9,9 @@
   display: none;
 }
 
-/* This class will be called by javascript to make the modal box appear
 .modal__opened {
   display: flex;
 }
-*/
 
 .modal__container {
   background-color: #ffffff;
