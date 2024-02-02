@@ -8,7 +8,7 @@
 
 **Intro**
 
-The purpose of this project is to build a responsive travel photo-sharing website that takes into account changes in viewing resolution using media queries to give viewers an optimal experience across different devices. In addition, JavaScript is utilized to allow users to customize their profile through dynamically changing HTML elements without touching the source code. This project utilizes a combination of flexbox learned in the last spring and grid, in conjunction to allow for a greater flexibility in designing websites.
+The purpose of this project is to build a responsive travel photo-sharing website that takes into account changes in viewing resolution using media queries to give viewers an optimal experience across different devices. In addition, JavaScript is utilized to give users greater flexibility in customize their profile through dynamically changing HTML elements. This project utilizes a combination of flexbox learned in the last spring and grid, in conjunction to allow for a greater flexibility in designing websites.
 
 **Link to Figma Design**
 
