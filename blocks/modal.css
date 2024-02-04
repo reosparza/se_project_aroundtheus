@@ -9,7 +9,7 @@
   display: none;
 }
 
-.modal__popup_open {
+.modal--opened {
   display: flex;
 }
 
