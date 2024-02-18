@@ -110,9 +110,22 @@
       </div>
     </div>
 
+    <!--image modal-->
+    <div class="modal" id="image-modal">
+      <div class="modal__container">
+        <button
+          type="button"
+          class="modal__close-button"
+          id="image-modal-close-button"
+        ></button>
+        <h3 class="modal__title">Edit Profile</h3>
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card">
         <img src="" alt="" class="card__image" />
+        <button type="button" class="card__delete-button"></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button type="button" class="card__like-button"></button>
