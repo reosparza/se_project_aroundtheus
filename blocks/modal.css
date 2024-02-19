@@ -100,6 +100,29 @@
   cursor: pointer;
 }
 
+.modal__container_type_image {
+  padding: 0;
+  max-height: 75vh;
+  max-width: 75vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 14.52px;
+  font-weight: 400;
+}
+
+.modal__image {
+  object-fit: cover;
+}
+
+.modal__image-caption {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  margin: 0;
+}
+
 @media screen and (max-width: 620px) {
   .modal__container {
     padding: 25px 22px;
@@ -125,4 +148,15 @@
     font-size: 14px;
     line-height: 16.94px;
   }
+}
+
+.modal__container_type_image {
+  padding: 0;
+}
+
+.modal__close-button_type_image {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+  right: -35px;
 }
