@@ -104,16 +104,20 @@
   padding: 0;
   max-height: 75vh;
   max-width: 75vw;
+  width: auto;
   display: flex;
   flex-direction: column;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 14.52px;
   font-weight: 400;
+  background: none;
 }
 
 .modal__image {
   object-fit: cover;
+  max-height: 75vh;
+  max-width: 75vw;
 }
 
 .modal__image-caption {
