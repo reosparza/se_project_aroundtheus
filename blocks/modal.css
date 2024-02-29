@@ -4,7 +4,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   visibility: hidden;
@@ -61,6 +60,12 @@
   flex-direction: column;
 }
 
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .modal__input {
   padding: 0;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -70,6 +75,19 @@
   color: #000000;
   border-width: 0 0 1px;
   margin-bottom: 30px;
+}
+
+.modal__input_type_error {
+  border-color: #ff0000;
+}
+
+.modal__title-error {
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+  top: calc(100% + 5px);
+  left: 0;
+  transition: opacity 0.3s;
 }
 
 .modal__input:focus {
