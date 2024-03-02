@@ -62,30 +62,32 @@
               type="text"
               name="title"
               placeholder="Name"
-              class="modal__input modal__input_type_error"
+              class="modal__input"
               id="profile-title-input"
               minlength="2"
               maxlength="40"
               required
             />
-            <span class="modal__title-error"
-              >Title error message goes here</span
-            >
+            <span
+              class="modal__title-error"
+              id="profile-title-input-error"
+            ></span>
           </label>
           <label class="modal__label">
             <input
               type="text"
               name="description"
               placeholder="Description"
-              class="modal__input modal__input_type_error"
+              class="modal__input"
               id="profile-description-input"
               minlength="2"
               maxlength="200"
               required
             />
-            <span class="modal__title-error"
-              >Description error message goes here</span
-            >
+            <span
+              class="modal__title-error"
+              id="profile-description-input-error"
+            ></span>
           </label>
           <button type="submit" class="modal__save-button">Save</button>
         </form>
@@ -109,9 +111,7 @@
               id="profile-title-input"
               required
             />
-            <span class="modal__title-error"
-              >New place title error goes here</span
-            >
+            <span class="modal__title-error"></span>
           </label>
           <label class="modal__label">
             <input
@@ -122,7 +122,7 @@
               id="profile-description-input"
               required
             />
-            <span class="modal__title-error">Url error goes here</span>
+            <span class="modal__title-error"></span>
           </label>
           <button type="submit" class="modal__save-button">Save</button>
         </form>
