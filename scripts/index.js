@@ -54,8 +54,16 @@ const modalImageElement = imageModal.querySelector(".modal__image");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
+function openModal(modal) {
+  modal.classList.add("modal_opened");
+  document.addEventListener("keydown", escapeKeyCloseModal);
+  modal.addEventListener("mousedown", outsideClickCloseModal);
+}
+
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", escapeKeyCloseModal);
+  modal.removeEventListener("mousedown", outsideClickCloseModal);
 }
 
 function renderCard(cardData, wrapper) {
@@ -82,7 +90,7 @@ function getCardElement(cardData) {
     modalImageElement.src = cardData.link;
     ImageModalCaption.textContent = cardData.name;
     modalImageElement.alt = cardData.name;
-    opemModal(imageModal);
+    openModal(imageModal);
   });
 
   cardImageEl.setAttribute("src", cardData.link);
@@ -108,20 +116,16 @@ function handleAddCardFormSubmit(evt) {
   evt.target.reset();
 }
 
-function opemModal(modal) {
-  modal.classList.add("modal_opened");
-}
-
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  opemModal(profileEditModal);
+  openModal(profileEditModal);
 });
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 addCardFormElement.addEventListener("submit", handleAddCardFormSubmit);
 
-addNewCardButton.addEventListener("click", () => opemModal(addCardModal));
+addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 
 closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
@@ -130,3 +134,18 @@ closeButtons.forEach((button) => {
 });
 
 initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
+
+function escapeKeyCloseModal(evt, imageModal) {
+  if (evt.key === "Escape") {
+    console.log("Escape key is pressed");
+    document.querySelectorAll(".modal").forEach((modal) => {
+      closePopup(modal);
+    });
+  }
+}
+
+function outsideClickCloseModal(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closePopup(evt.target);
+  }
+}
