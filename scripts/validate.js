@@ -1,6 +1,3 @@
-// enabling validation by calling enableValidation()
-// pass all the settings on call
-
 function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   inputEl.classList.add(inputErrorClass);
@@ -54,21 +51,10 @@ function enableValidation(config) {
   const formEls = [...document.querySelectorAll(config.formSelector)];
   formEls.forEach((formEl) => {
     formEl.addEventListener("submit", (e) => {
-      e.preventDefault(); //can possibly remove preventdefault on index.js
+      e.preventDefault();
     });
 
     setEventListeners(formEl, config);
-
-    // look for all inputs inside of form
-    // loop through all the inputs to see if all are valid
-    // if input is not valid
-    // get validation message
-    // add error class to input
-    // display error message
-    // disable buton
-    // if all inputs are valid
-    // enable button
-    // reset error messages
   });
 }
 

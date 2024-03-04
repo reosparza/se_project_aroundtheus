@@ -92,15 +92,12 @@
   position: absolute;
 }
 
-.modal__error_visible {
-  opacity: 1;
+.modal__url-error {
+  top: 23px;
 }
 
-.modal__button_disabled {
-  pointer-events: none;
-  opacity: 0.2;
-  background-color: #ffffff;
-  color: #000000;
+.modal__error_visible {
+  opacity: 1;
 }
 
 .modal__input:focus {
@@ -134,6 +131,17 @@
 .modal__save-button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.modal__button_disabled {
+  pointer-events: none;
+  opacity: 0.2;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px;
+  border-color: rgba(0, 0, 0, 1);
+  border-radius: 2px;
+  border-style: solid;
 }
 
 .modal__container_type_image {
