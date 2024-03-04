@@ -25,6 +25,7 @@ const initialCards = [
   },
 ];
 
+const modals = document.querySelectorAll(".modal");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const addCardModal = document.querySelector("#add-card-modal");
 const imageModal = document.querySelector("#image-modal");
@@ -37,7 +38,7 @@ const addNewCardButton = document.querySelector(".profile__add-button");
 
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
-const ImageModalCaption = imageModal.querySelector(".modal__image-caption");
+const imageModalCaption = imageModal.querySelector(".modal__image-caption");
 
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
@@ -56,14 +57,14 @@ const cardTemplate =
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  document.addEventListener("keydown", escapeKeyCloseModal);
-  modal.addEventListener("mousedown", outsideClickCloseModal);
+  document.addEventListener("keydown", handleEscape);
+  modal.addEventListener("mousedown", handleOutsideClick);
 }
 
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", escapeKeyCloseModal);
-  modal.removeEventListener("mousedown", outsideClickCloseModal);
+  document.removeEventListener("keydown", handleEscape);
+  modal.removeEventListener("mousedown", handleOutsideClick);
 }
 
 function renderCard(cardData, wrapper) {
@@ -88,7 +89,7 @@ function getCardElement(cardData) {
 
   cardImageEl.addEventListener("click", () => {
     modalImageElement.src = cardData.link;
-    ImageModalCaption.textContent = cardData.name;
+    imageModalCaption.textContent = cardData.name;
     modalImageElement.alt = cardData.name;
     openModal(imageModal);
   });
@@ -135,16 +136,15 @@ closeButtons.forEach((button) => {
 
 initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
 
-function escapeKeyCloseModal(evt, imageModal) {
+function handleEscape(evt) {
   if (evt.key === "Escape") {
-    console.log("Escape key is pressed");
-    document.querySelectorAll(".modal").forEach((modal) => {
+    modals.forEach((modal) => {
       closePopup(modal);
     });
   }
 }
 
-function outsideClickCloseModal(evt) {
+function handleOutsideClick(evt) {
   if (evt.target.classList.contains("modal")) {
     closePopup(evt.target);
   }
