@@ -9,7 +9,6 @@
     />
     <meta name="author" content="Rafael Esparza" />
     <meta name="keywords" content="travel, experience, share, photos" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Around the U.S.</title>
   </head>
@@ -17,17 +16,17 @@
     <div class="page__content">
       <header class="header page__section">
         <img
-          src="./images/logo.svg"
-          alt="Around the U.S. logo"
+          src="<%=require('./images/logo.svg')%>"
           class="header__logo"
+          alt="Logo"
         />
       </header>
       <main class="main">
         <section class="profile page__section">
           <img
-            src="./images/jacques-cousteau.jpg"
-            alt="Photo of Jacques Cousteau"
+            src="<%=require('./images/jacques-cousteau.jpg')%>"
             class="profile__avatar"
+            alt="Logo"
           />
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
@@ -162,6 +161,5 @@
         </div>
       </li>
     </template>
-    <script defer src="./pages/index.js" type="module"></script>
   </body>
 </html>
