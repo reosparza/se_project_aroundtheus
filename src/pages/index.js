@@ -3,6 +3,7 @@ import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import Section from "../components/Section.js";
+import PopupWithImage from "../components/PopupWithImage.js";
 import {
   initialCards,
   config,
@@ -111,4 +112,14 @@ function handleOutsideClick(evt) {
   }
 }
 
-initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
+//initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
+
+const cardSection = new Section(
+  { items: initialCards, renderer: getCardElement },
+  ".cards__list"
+);
+
+cardSection.renderItems();
+
+const imagePopup = new PopupWithImage("#image-modal");
+imagePopup.setEventListeners();

@@ -1,7 +1,11 @@
 export default class Popup {
   constructor({ popupSelector }) {
+    console.log(popupSelector);
     this._popupElement = document.querySelector(popupSelector);
-    this._closeButton = this._popupElement.querySelector("modal__close-button");
+    console.log(this._popupElement);
+    this._closeButton = this._popupElement.querySelector(
+      ".modal__close-button"
+    );
   }
 
   open() {
@@ -20,7 +24,7 @@ export default class Popup {
     }
   };
 
-  _setEventListeners() {
+  setEventListeners() {
     this._closeButton.addEventListener("click", () => {
       this.close();
     });
