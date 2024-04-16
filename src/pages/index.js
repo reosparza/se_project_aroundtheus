@@ -26,7 +26,7 @@ import {
   profileTitleInput,
   cardListEl,
   modalImageElement,
-} from "../../utils/constants.js";
+} from "../utils/constants.js";
 
 const enableValidation = () => {
   const formEls = Array.from(document.querySelectorAll(config.formSelector));
