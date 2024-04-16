@@ -64,8 +64,8 @@ const addCardPopup = new PopupWithForm(
 
 function handleAddCardFormSubmit() {
   const name = cardTitleInput.value;
-  const url = cardUrlInput.value;
-  const card = getCardElement({ name, url });
+  const link = cardUrlInput.value;
+  const card = getCardElement({ name, link });
   cardSection.addItem(card);
   addCardPopup.close();
 }
@@ -98,68 +98,3 @@ profileEditButton.addEventListener("click", handleFormModalButton);
 addNewCardButton.addEventListener("click", handleAddCardFormButton);
 
 cardSection.renderItems();
-
-//Items below are commented out to test the proper function of the class instances
-
-//function openModal(modal) {
-//  modal.classList.add("modal_opened");
-//  document.addEventListener("keydown", handleEscape);
-//  modal.addEventListener("mousedown", handleOutsideClick);
-//}
-
-//function closePopup(modal) {
-//  modal.classList.remove("modal_opened");
-//  document.removeEventListener("keydown", handleEscape);
-//  modal.removeEventListener("mousedown", handleOutsideClick);
-//}
-
-//function renderCard(cardData, wrapper) {
-//  const cardElement = getCardElement(cardData);
-//  wrapper.prepend(cardElement);
-//}
-
-//function handleProfileEditSubmit(evt) {
-//  evt.preventDefault();
-//  profileTitle.textContent = profileTitleInput.value;
-//  profileDescription.textContent = profileDescriptionInput.value;
-//  closePopup(profileEditModal);
-//}
-
-//function handleAddCardFormSubmit(evt) {
-//  evt.preventDefault();
-//  const name = cardTitleInput.value;
-//  const link = cardUrlInput.value;
-//  renderCard({ name, link }, cardListEl);
-//  closePopup(addCardModal);
-//  evt.target.reset();
-//}
-
-//  profileTitleInput.value = profileTitle.textContent;
-//  profileDescriptionInput.value = profileDescription.textContent;
-//  openModal(profileEditModal);
-//});
-
-//profileEditForm.addEventListener("submit", handleProfileEditSubmit);
-//addCardFormElement.addEventListener("submit", handleAddCardFormSubmit);
-
-//closeButtons.forEach((button) => {
-//  const popup = button.closest(".modal");
-
-//  button.addEventListener("click", () => closePopup(popup));
-//});
-
-//function handleEscape(evt) {
-//  if (evt.key === "Escape") {
-//    modals.forEach((modal) => {
-//      closePopup(modal);
-//    });
-//  }
-//}
-
-//function handleOutsideClick(evt) {
-//  if (evt.target.classList.contains("modal")) {
-//    closePopup(evt.target);
-//  }
-//}
-
-//initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
