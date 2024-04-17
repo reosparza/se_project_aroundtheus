@@ -57,10 +57,14 @@ const profileEditPopup = new PopupWithForm(
   handleProfileModalSubmit
 );
 
+profileEditPopup.setEventListeners();
+
 const addCardPopup = new PopupWithForm(
   "#add-card-modal",
   handleAddCardFormSubmit
 );
+
+addCardPopup.setEventListeners();
 
 function handleAddCardFormSubmit() {
   const name = cardTitleInput.value;
@@ -80,17 +84,14 @@ function handleFormModalButton() {
   profileTitleInput.value = userProfile.name;
   profileDescriptionInput.value = userProfile.description;
   profileEditPopup.open();
-  profileEditPopup.setEventListeners();
 }
 
 function handleAddCardFormButton() {
   addCardPopup.open();
-  addCardPopup.setEventListeners();
 }
 
-function handleProfileModalSubmit() {
-  profileTitle.textContent = profileTitleInput.value;
-  profileDescription.textContent = profileDescriptionInput.value;
+function handleProfileModalSubmit(data) {
+  user.setUserInfo({ name: data.title, description: data.description });
   profileEditPopup.close();
 }
 
