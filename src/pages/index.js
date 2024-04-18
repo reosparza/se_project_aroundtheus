@@ -66,9 +66,9 @@ const addCardPopup = new PopupWithForm(
 
 addCardPopup.setEventListeners();
 
-function handleAddCardFormSubmit() {
-  const name = cardTitleInput.value;
-  const link = cardUrlInput.value;
+function handleAddCardFormSubmit(userInfo) {
+  const name = userInfo.title;
+  const link = userInfo.url;
   const card = getCardElement({ name, link });
   cardSection.addItem(card);
   addCardPopup.close();
